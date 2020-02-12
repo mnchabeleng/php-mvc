@@ -1,11 +1,12 @@
-<?php include "inc/header.php" ?>
-<h1><?= $data["page_title"] ?></h1>
-<ul>
-    <?php foreach($data["posts"] as $post): ?>
-    <?= "<li>" ?>
-    <?= "<h3>$post->title</h3>" ?>
-    <?= "<p>$post->body</p>" ?>
-    <?= "</li>" ?>
-    <?php endforeach ?>
-</ul>
-<?php include "inc/footer.php" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title><?= $data["page_title"]; ?></title>
+</head>
+<body>
+    <h1><?= $data["page_title"]; ?></h1>
+</body>
+</html>
