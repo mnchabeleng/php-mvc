@@ -15,9 +15,15 @@ class Core{
     public function __construct()
     {
         $url = $this->get_url();
+        $controller = "../app/controllers/" . ucwords($url[0]) . ".php";
 
         // look inside controllers for first value
-        if (file_exists("../app/controllers/" . ucwords($url[0]) . ".php"))
+        if(!file_exists($controller) && $url[0])
+        {
+            // if does not exists, set as controller
+            $this->current_controller = "Error404";
+        }
+        else if (file_exists($controller))
         {
             // if exists, set as controller
             $this->current_controller = ucwords($url[0]);
